@@ -1,0 +1,134 @@
+
+.grid__container {
+    padding: 5px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "header header header header"
+    "main main main sidebar"
+    "footer footer footer footer";
+    
+  }
+
+.item{
+    @include linear-gradient($second-color, $second-shade);
+    border-radius: 5px;
+    padding: 5px;
+    @include box-shadow(3px, 3px, 5px, rgba(0, 0, 0, 0.315), false);
+}
+
+.header{
+    grid-area: header;  
+}
+
+.item__main{
+    grid-area: main;    
+}
+
+.item__sidebar{
+    grid-area: sidebar;    
+}
+
+.item__header{
+    grid-area: header;
+}
+
+.item__footer{
+    grid-area: footer;
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+/* Styles */
+.grid__container {
+  grid-template-areas: 
+  "header header header header"
+  "sidebar sidebar sidebar sidebar"
+  "main main main main"
+  "footer footer footer footer";
+}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+  .grid__container {
+    grid-template-areas: 
+    "header header header header"
+    "sidebar sidebar sidebar sidebar"
+    "main main main main"
+    "footer footer footer footer";
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px) {
+/* Styles */
+.grid__container {
+  grid-template-areas: 
+  "header header sidebar sidebar"
+  "main main sidebar sidebar"
+  "footer footer footer footer";
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+
+.grid__container {
+  grid-template-areas: 
+  "header header header sidebar"
+  "main main main sidebar"
+  "footer footer footer sidebar";
+  }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

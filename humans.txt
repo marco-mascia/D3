@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology stack
+
+# TEAM
+
+    Marco Mascia
+
+
+# TECHNOLOGY STACK
+
+    CSS3, HTML5
+    Webpack, SASS
