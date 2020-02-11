@@ -1,10 +1,6 @@
 import './scss/main.scss';
-
-/*
-const arr = [1, 2, 3];
-const iAmJavascriptES6 = () => console.log(...arr);
-window.iAmJavascriptES6 = iAmJavascriptES6;
-*/
+import * as d3 from "d3";
+import crime_data from '../assets/crime_data.csv';
 
 const messages = {
     header: 'intestazione',
@@ -14,26 +10,35 @@ const messages = {
 }
 
 export function init() {
-    /*
-   var src = document.getElementById('#print-script'); //$("#print-script").html();
-   var source = src.innerHTML();
-   var template = Handlebars.compile(source);
-   var data = {
-       image:        'http://placekitten.com/100/100',
-       title:        'title',
-       caption:      'caption',
-       category:     function() {
-           console.log('category');
-           return 'category';
-       } 
-   };
-   */
+   console.log("Init");
 
-   /*
-   let template = require("./index.handlebars");
-   let $compiled = template({});
-   $(document.body).append($compiled)
-   */
+   const svg = d3.select('.drawingboard')
+    .append('svg')
+    .attr('height', 400)
+    .attr('width', 800);
+
+    const lollypop = svg.append('g').attr('transform', 'translate(200, 200)');
+
+    const line = lollypop
+    .append('line')
+    .attr('x2', 200)
+    .style('stroke', 'black');
+
+
+    const circle = lollypop
+    .append('circle')
+    .attr('cx', 200)
+    .attr('r', 10)
+    .style('stroke', 'black')
+    .style('fill', 'red');
+
+    const label = lollypop
+    .append('text')
+    .text('Lollypop')
+    .attr('y', -10)
+
+    d3.csv(crime_data).then(res => { console.log('loaded ', res) });
+
 
 }
 init();

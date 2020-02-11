@@ -30,6 +30,8 @@
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.1",
+    "csv-loader": "^3.0.2",
+    "d3": "^5.15.0",
     "handlebars": "^4.1.2",
     "handlebars-loader": "^1.7.1",
     "html-loader": "^0.5.5",
@@ -37,6 +39,7 @@
     "jest": "^24.8.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
+    "papaparse": "^5.1.1",
     "postcss-loader": "^2.1.5",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
@@ -45,5 +48,6 @@
     "webpack-dev-server": "^3.7.2",
     "webpack-md5-hash": "0.0.6",
     "webpack-merge": "^4.1.4"
-  }
+  },
+  "dependencies": {}
 }

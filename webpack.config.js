@@ -36,6 +36,12 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader','css-loader', 'postcss-loader', 'sass-loader']
+            },
+            {
+                test: /\.(csv|tsv)$/,
+                    use: [
+                        'csv-loader'
+                    ]
             }
         ]
     },
@@ -47,7 +53,7 @@ module.exports = {
             filename: "style.[contenthash].css"
         }),
         new HtmlWebpackPlugin({
-            title: 'My Boilerplate',
+            title: 'D3 Skilling up',
             template: './src/index.handlebars',
             minify: !isDevMode && {
                 html5: true,
