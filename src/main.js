@@ -1,5 +1,7 @@
 import './scss/main.scss';
 import * as d3 from "d3";
+
+import drawBarChart from './barchart.ts' 
 import crime_data from '../assets/crime_data.csv';
 import dendrogram_data from '../assets/dendrogram_data.json';
 
@@ -115,3 +117,5 @@ export function init() {
 
 }
 init();
+
+drawBarChart();

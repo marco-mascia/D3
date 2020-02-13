@@ -4,6 +4,13 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin'); //clean directories before build
 const isDevMode = 'production' !== process.env.NODE_ENV;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const paths = {
+    src: path.join(__dirname, 'src'),
+    dist: path.join(__dirname, 'dist'),
+    data: path.join(__dirname, 'assets')
+}
 
 module.exports = {
     entry: { main: './src/main.js' },
@@ -11,8 +18,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
     },
+
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        //contentBase: path.join(__dirname, 'dist'),
+        contentBase: paths.dist,
         compress: true,
         port: 9000
     },
@@ -46,6 +55,12 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyWebpackPlugin([
+            {
+              from: paths.data,
+              to: paths.dist + '/assets'
+            }
+          ]),
         new CleanWebpackPlugin('dist', {}),  //Cleans dist directory before build
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
