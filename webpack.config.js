@@ -53,7 +53,7 @@ module.exports = {
             filename: "style.[contenthash].css"
         }),
         new HtmlWebpackPlugin({
-            title: 'D3 Skilling up',
+            title: 'D3 Dendrogram',
             template: './src/index.handlebars',
             minify: !isDevMode && {
                 html5: true,
