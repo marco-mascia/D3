@@ -79,14 +79,13 @@ export default function drawHierarchicalChart() {
       var nodeEnter = node
         .enter()
         .append("g")
-        .attr("class", function(d){
-            return 'node level-'+d.depth; // add the node depth
+        .attr("class", function(d) {
+          return "node level-" + d.depth; // add the node depth
         })
         .attr("transform", function(d) {
           return "translate(" + source.y0 + "," + source.x0 + ")";
         })
         .on("click", click);
-
 
       // Add Circle for the nodes
       /*
@@ -99,7 +98,7 @@ export default function drawHierarchicalChart() {
         });
         */
 
-    const rectangle = nodeEnter
+      const rectangle = nodeEnter
         .append("rect")
         .attr("class", "node")
         .attr("rx", 5)
@@ -110,7 +109,7 @@ export default function drawHierarchicalChart() {
         .attr("height", 30)
         .style("stroke", "steelblue")
         .style("fill", function(d) {
-            return d._children ? "lightsteelblue" : "#fff";
+          return d._children ? "lightsteelblue" : "#fff";
         });
 
       // Add labels for the nodes
@@ -158,9 +157,10 @@ export default function drawHierarchicalChart() {
         .remove();
 
       // On exit reduce the node circles size to 0
-      nodeExit.select("rect")
-      .attr("rx", 1e-6)
-      .attr("ry", 1e-6);
+      nodeExit
+        .select("rect")
+        .attr("rx", 1e-6)
+        .attr("ry", 1e-6);
       //.attr("r", 1e-6);
 
       // On exit reduce the opacity of text labels
@@ -177,8 +177,8 @@ export default function drawHierarchicalChart() {
       var linkEnter = link
         .enter()
         .insert("path", "g")
-        .attr("class", function(d){
-            return 'link level-'+d.depth; // add the node depth
+        .attr("class", function(d) {
+          return "link level-" + d.depth; // add the node depth
         })
         //.attr("class", "link")
         .attr("d", function(d) {
@@ -216,14 +216,19 @@ export default function drawHierarchicalChart() {
 
       // Creates a curved (diagonal) path from parent to the child nodes
       function diagonal(s, d) {
-          /*
+        /*
         let path = `M ${s.y} ${s.x}
             C ${(s.y + d.y ) / 2} ${s.x},
               ${(s.y + d.y ) / 2} ${d.x},
               ${d.y} ${d.x}`;*/
-
-        let path = `M ${s.y} ${s.x} L ${d.y + 120} ${d.x}`;
-  
+        /*
+        let path = `M ${s.y} ${s.x}
+              C ${(s.y - d.y) } ${s.x},
+                ${(s.y + d.y)} ${d.x},
+                ${d.y + 120} ${d.x}`;*/
+        console.log('s ', s);
+        console.log('d', d)
+        let path = `M ${s.y} ${s.x} L ${d.y + 125} ${d.x}`;
 
         return path;
       }
