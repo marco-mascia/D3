@@ -1,38 +1,41 @@
 import * as d3 from "d3";
 
 export default function drawHierarchicalChart() {
-  d3.json("/assets/dendrogram_data.json").then(res => {
+  d3.json("/assets/flare.json").then(res => {
     draw(res);
   });
-
-  const edge_weight = d3
-    .scaleLinear()
-    .domain([0, 100])
-    .range([0, 100]);
 
   // Set the dimensions and margins of the diagram
   const margin = { top: 20, right: 90, bottom: 30, left: 90 },
     width = 1200 - margin.left - margin.right,
     height = 800 - margin.top - margin.bottom;
 
-  function draw(data) {
-    // append the svg object to the body of the page
-    // appends a 'group' element to 'svg'
-    // moves the 'group' element to the top left margin
-    var svg = d3
-      .select("body")
-      .append("svg")
-      .attr("width", width + margin.right + margin.left)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  // append the svg object to the body of the page
+  const svg = d3
+    .select(".drawingboard")
+    .append("svg")
+    .attr("width", width + margin.right + margin.left)
+    .attr("height", height + margin.top + margin.bottom);
 
-    var i = 0,
+  // appends a 'group' element to 'svg'
+  // moves the 'group' element to the top left margin
+  const g = svg
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.call(
+    d3.zoom().on("zoom", function() {
+      svg.attr("transform", d3.event.transform);
+    })
+  );
+
+  function draw(data) {
+    let i = 0,
       duration = 750,
       root;
 
     // declares a tree layout and assigns the size
-    var treemap = d3.tree().size([height, width]);
+    let treemap = d3.tree().size([height, width]);
 
     // Assigns parent, children, height, depth
     root = d3.hierarchy(data, function(d) {
@@ -43,7 +46,6 @@ export default function drawHierarchicalChart() {
 
     // Collapse after the second level
     root.children.forEach(collapse);
-
     update(root);
 
     // Collapse the node and all it's children
@@ -57,10 +59,10 @@ export default function drawHierarchicalChart() {
 
     function update(source) {
       // Assigns the x and y position for the nodes
-      var treeData = treemap(root);
+      let treeData = treemap(root);
 
       // Compute the new tree layout.
-      var nodes = treeData.descendants(),
+      let nodes = treeData.descendants(),
         links = treeData.descendants().slice(1);
 
       // Normalize for fixed-depth.
@@ -71,12 +73,12 @@ export default function drawHierarchicalChart() {
       // ****************** Nodes section ***************************
 
       // Update the nodes...
-      var node = svg.selectAll("g.node").data(nodes, function(d) {
+      let node = svg.selectAll("g.node").data(nodes, function(d) {
         return d.id || (d.id = ++i);
       });
 
       // Enter any new modes at the parent's previous position.
-      var nodeEnter = node
+      let nodeEnter = node
         .enter()
         .append("g")
         .attr("class", function(d) {
@@ -109,7 +111,7 @@ export default function drawHierarchicalChart() {
         .attr("height", 30)
         .style("stroke", "steelblue")
         .style("fill", function(d) {
-          return d._children ? "lightsteelblue" : "#fff";
+          return d._children ? "lightsteelblue" : "white";
         });
 
       // Add labels for the nodes
@@ -127,7 +129,7 @@ export default function drawHierarchicalChart() {
         });
 
       // UPDATE
-      var nodeUpdate = nodeEnter.merge(node);
+      let nodeUpdate = nodeEnter.merge(node);
 
       // Transition to the proper position for the node
       nodeUpdate
@@ -147,7 +149,7 @@ export default function drawHierarchicalChart() {
         .attr("cursor", "pointer");
 
       // Remove any exiting nodes
-      var nodeExit = node
+      let nodeExit = node
         .exit()
         .transition()
         .duration(duration)
@@ -161,7 +163,6 @@ export default function drawHierarchicalChart() {
         .select("rect")
         .attr("rx", 1e-6)
         .attr("ry", 1e-6);
-      //.attr("r", 1e-6);
 
       // On exit reduce the opacity of text labels
       nodeExit.select("text").style("fill-opacity", 1e-6);
@@ -169,12 +170,12 @@ export default function drawHierarchicalChart() {
       // ****************** links section ***************************
 
       // Update the links...
-      var link = svg.selectAll("path.link").data(links, function(d) {
+      let link = svg.selectAll("path.link").data(links, function(d) {
         return d.id;
       });
 
       // Enter any new links at the parent's previous position.
-      var linkEnter = link
+      let linkEnter = link
         .enter()
         .insert("path", "g")
         .attr("class", function(d) {
@@ -182,12 +183,12 @@ export default function drawHierarchicalChart() {
         })
         //.attr("class", "link")
         .attr("d", function(d) {
-          var o = { x: source.x0, y: source.y0 };
+          let o = { x: source.x0, y: source.y0 };
           return diagonal(o, o);
         });
 
       // UPDATE
-      var linkUpdate = linkEnter.merge(link);
+      let linkUpdate = linkEnter.merge(link);
 
       // Transition back to the parent element position
       linkUpdate
@@ -198,12 +199,12 @@ export default function drawHierarchicalChart() {
         });
 
       // Remove any exiting links
-      var linkExit = link
+      let linkExit = link
         .exit()
         .transition()
         .duration(duration)
         .attr("d", function(d) {
-          var o = { x: source.x, y: source.y };
+          let o = { x: source.x, y: source.y };
           return diagonal(o, o);
         })
         .remove();
@@ -226,8 +227,8 @@ export default function drawHierarchicalChart() {
               C ${(s.y - d.y) } ${s.x},
                 ${(s.y + d.y)} ${d.x},
                 ${d.y + 120} ${d.x}`;*/
-        console.log('s ', s);
-        console.log('d', d)
+        //console.log("s ", s);
+        //console.log("d ", d);
         let path = `M ${s.y} ${s.x} L ${d.y + 125} ${d.x}`;
 
         return path;

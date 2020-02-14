@@ -1,9 +1,7 @@
 import './scss/main.scss';
 import * as d3 from "d3";
-//import drawBarChart from './barchart.ts' 
 import crime_data from '../assets/crime_data.csv';
 import dendrogram_data from '../assets/dendrogram_data.json';
-//import drawOrgChart from './orgchart.ts';
 import drawHierarchicalChart from './hierarchicalchart.ts';
 
 const messages = {
@@ -113,13 +111,10 @@ export function init() {
 
     }
     */
-
     //draw(dendrogram_data);
     //draw(dendrogram_data);
-
 }
 //init();
-
 //drawBarChart();
 //drawOrgChart();
 drawHierarchicalChart();

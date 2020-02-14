@@ -25,18 +25,18 @@ ul {
   }
 }
   
-svg { border: 1px solid black; }
-
+svg { 
+  border: 1px solid lightsteelblue; 
+  background-color: wheat;
+}
 
 .level-0 {
   opacity: 0;
 }
 
-
-
 .node circle {
   fill: #fff;
-  stroke: steelblue;
+  stroke: lightsteelblue;
   stroke-width: 3px;
 }
 
