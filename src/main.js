@@ -1,9 +1,10 @@
 import './scss/main.scss';
 import * as d3 from "d3";
-
-import drawBarChart from './barchart.ts' 
+//import drawBarChart from './barchart.ts' 
 import crime_data from '../assets/crime_data.csv';
 import dendrogram_data from '../assets/dendrogram_data.json';
+//import drawOrgChart from './orgchart.ts';
+import drawHierarchicalChart from './hierarchicalchart.ts';
 
 const messages = {
     header: 'intestazione',
@@ -45,10 +46,11 @@ export function init() {
     //console.log('crime_data', crime_data);
 
     // set the dimensions and margins of the graph
-    var width = 800
-    var height = 460
+    //var width = 800
+   //var height = 460
 
     // append the svg object to the body of the page
+    /*
     var svg = d3.select(".drawingboard")
         .append("svg")
         .attr("width", width)
@@ -56,7 +58,6 @@ export function init() {
         .append("g")
         .attr("transform", "translate(40,0)"); // bit of margin on the left = 40
 
- 
 
     var g = svg.append("g").attr("transform", "translate(60,0)");
 
@@ -111,11 +112,14 @@ export function init() {
             });
 
     }
+    */
 
     //draw(dendrogram_data);
-    draw(dendrogram_data);
+    //draw(dendrogram_data);
 
 }
-init();
+//init();
 
-drawBarChart();
+//drawBarChart();
+//drawOrgChart();
+drawHierarchicalChart();

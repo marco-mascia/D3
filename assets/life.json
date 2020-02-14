@@ -1,0 +1,1092 @@
+{
+    "identifier": "id",
+    "items": [
+      {
+        "id": 54767744,
+        "snId": "",
+        "name": "Animalia",
+        "type": "",
+        "parentId": 0,
+        "numChildren": 33,
+        "estimation": "1,525,728",
+        "total": "1,356,331",
+        "nr_fossil": "60,139",
+        "nr_extant": "1,296,192",
+        "estimate_source": "Zhang Z.-Q., ed. (2013). Animal biodiversity: An outline of higher-level classification and survey of taxonomic richness (Addenda 2013). Zootaxa 3703 (1): 1–82.",
+        "is_extinct": 0,
+        "has_preholocene": 0,
+        "has_modern": 1,
+        "image": "/annual-checklist/2019/images/tree_icons/animalia.png",
+        "rank": "",
+        "url": null,
+        "percentage": "85%",
+        "source_databases": [
+          {
+            "source_database_id": 189,
+            "short_name": "3i Auchenorrhyncha",
+            "full_name": "3i Auchenorrhyncha: World Auchenorrhyncha Database"
+          },
+          {
+            "source_database_id": 166,
+            "short_name": "3i Curculio",
+            "full_name": "3i Curculio: 3i taxonomic databases, Curculionidae, subfamily Entiminae"
+          },
+          {
+            "source_database_id": 80,
+            "short_name": "BdelloideaBase",
+            "full_name": "BdelloideaBase: Bdellid & Cunaxid Databases"
+          },
+          {
+            "source_database_id": 57,
+            "short_name": "Brachiopoda Database",
+            "full_name": "Brachiopoda Database"
+          },
+          {
+            "source_database_id": 161,
+            "short_name": "Brentids",
+            "full_name": "Brentids: Brentidae of the World"
+          },
+          {
+            "source_database_id": 146,
+            "short_name": "CarabCat",
+            "full_name": "CarabCat: Global database of ground beetles"
+          },
+          {
+            "source_database_id": 5,
+            "short_name": "CCW",
+            "full_name": "CCW: Catalogue of Craneflies of the World"
+          },
+          {
+            "source_database_id": 42,
+            "short_name": "ChiloBase",
+            "full_name": "ChiloBase: A World Catalogue of Centipedes (Chilopoda) for the web"
+          },
+          {
+            "source_database_id": 6,
+            "short_name": "CIPA",
+            "full_name": "CIPA: Computer Aided Identification of Phlebotomine sandflies of Americas"
+          },
+          {
+            "source_database_id": 121,
+            "short_name": "CoL China",
+            "full_name": "Catalogue of Life China"
+          },
+          {
+            "source_database_id": 192,
+            "short_name": "ColeorrhynchaSF",
+            "full_name": "SF Coleorrhyncha: Coleorrhyncha Species File"
+          },
+          {
+            "source_database_id": 52,
+            "short_name": "COOL",
+            "full_name": "COOL: Cercopoidea Organised On Line"
+          },
+          {
+            "source_database_id": 9,
+            "short_name": "ETI WBD (Euphausiacea)",
+            "full_name": "ETI WBD: World Biodiversity Database (Euphausiacea)"
+          },
+          {
+            "source_database_id": 138,
+            "short_name": "FADA Cladocera",
+            "full_name": "FADA Cladocera: World checklist of freshwater Cladocera species"
+          },
+          {
+            "source_database_id": 120,
+            "short_name": "FADA Ephemeroptera",
+            "full_name": "FADA Ephemeroptera: World checklist of freshwater Ephemeroptera species"
+          },
+          {
+            "source_database_id": 139,
+            "short_name": "FADA Halacaridae",
+            "full_name": "FADA Halacaridae: World checklist of freshwater Halacaridae species"
+          },
+          {
+            "source_database_id": 119,
+            "short_name": "FADA Nematomorpha",
+            "full_name": "FADA Nematomorpha: World checklist of freshwater Nematomorpha species"
+          },
+          {
+            "source_database_id": 47,
+            "short_name": "FADA Rotifera",
+            "full_name": "FADA Rotifera: Annotated checklist of the rotifers (Phylum Rotifera)"
+          },
+          {
+            "source_database_id": 10,
+            "short_name": "FishBase",
+            "full_name": "FishBase"
+          },
+          {
+            "source_database_id": 11,
+            "short_name": "FLOW",
+            "full_name": "FLOW: Fulgoromorpha Lists On the WEB"
+          },
+          {
+            "source_database_id": 49,
+            "short_name": "Global Gracillariidae",
+            "full_name": "Global Gracillariidae: Global Taxonomic Database of Gracillariidae"
+          },
+          {
+            "source_database_id": 46,
+            "short_name": "GloBIS (GART)",
+            "full_name": "GloBIS (GART): Global Butterfly Information System"
+          },
+          {
+            "source_database_id": 118,
+            "short_name": "HymIS",
+            "full_name": "HymIS: Hymenoptera Information System"
+          },
+          {
+            "source_database_id": 67,
+            "short_name": "ITIS Bees",
+            "full_name": "ITIS Bees: World Bee Checklist"
+          },
+          {
+            "source_database_id": 115,
+            "short_name": "ITIS Global",
+            "full_name": "ITIS Global: The Integrated Taxonomic Information System"
+          },
+          {
+            "source_database_id": 17,
+            "short_name": "ITIS Regional",
+            "full_name": "ITIS Regional: The Integrated Taxonomic Information System"
+          },
+          {
+            "source_database_id": 190,
+            "short_name": "Jewel Beetles",
+            "full_name": "Jewel Beetles: The World of Jewel Beetles "
+          },
+          {
+            "source_database_id": 144,
+            "short_name": "Lace Bugs Database",
+            "full_name": "Lace Bugs Database (Hemiptera: Tingidae)"
+          },
+          {
+            "source_database_id": 55,
+            "short_name": "LDL Neuropterida",
+            "full_name": "LDL Neuropterida Species of the World"
+          },
+          {
+            "source_database_id": 18,
+            "short_name": "LepIndex",
+            "full_name": "LepIndex: The Global Lepidoptera Names Index"
+          },
+          {
+            "source_database_id": 76,
+            "short_name": "MBB",
+            "full_name": "MBB: Moss Bug Base"
+          },
+          {
+            "source_database_id": 96,
+            "short_name": "MOWD",
+            "full_name": "MOWD: Membracoidea of the World Database"
+          },
+          {
+            "source_database_id": 172,
+            "short_name": "Nepticuloidea",
+            "full_name": "Nepticuloidea: Nepticulidae and Opostegidae of the World"
+          },
+          {
+            "source_database_id": 75,
+            "short_name": "NZIB",
+            "full_name": "NZIB: New Zealand Inventory of Biodiversity"
+          },
+          {
+            "source_database_id": 20,
+            "short_name": "Odonata",
+            "full_name": "Odonata: Global Species Database of Odonata"
+          },
+          {
+            "source_database_id": 63,
+            "short_name": "OlogamasidBase",
+            "full_name": "Mites GSDs: OlogamasidBase"
+          },
+          {
+            "source_database_id": 174,
+            "short_name": "PaleoBioDB",
+            "full_name": "PaleoBioDB: The Paleobiology Database"
+          },
+          {
+            "source_database_id": 22,
+            "short_name": "Parhost",
+            "full_name": "Parhost: World Database of Fleas"
+          },
+          {
+            "source_database_id": 171,
+            "short_name": "PBI Plant Bug",
+            "full_name": "PBI Plant Bug: On-line Systematic Catalog of Plant Bugs (Insecta: Heteroptera: Miridae)"
+          },
+          {
+            "source_database_id": 104,
+            "short_name": "Phoronida Database",
+            "full_name": "Phoronida Database"
+          },
+          {
+            "source_database_id": 70,
+            "short_name": "PhytoseiidBase",
+            "full_name": "Mites GSDs: PhytoseiidBase"
+          },
+          {
+            "source_database_id": 54,
+            "short_name": "Psyllist",
+            "full_name": "Psyl'list: Psylloidea database"
+          },
+          {
+            "source_database_id": 199,
+            "short_name": "Pterophoroidea",
+            "full_name": "Pterophoroidea: Catalogue of the Pterophoroidea of the World"
+          },
+          {
+            "source_database_id": 8,
+            "short_name": "ReptileDB",
+            "full_name": "The Reptile Database"
+          },
+          {
+            "source_database_id": 69,
+            "short_name": "RhodacaridBase",
+            "full_name": "Mites GSDs: RhodacaridBase"
+          },
+          {
+            "source_database_id": 26,
+            "short_name": "ScaleNet",
+            "full_name": "ScaleNet: Systematic Database of the Scale Insects of the World"
+          },
+          {
+            "source_database_id": 27,
+            "short_name": "Scarabs",
+            "full_name": "Scarabs: World Scarabaeidae Database"
+          },
+          {
+            "source_database_id": 61,
+            "short_name": "SF Aphid",
+            "full_name": "SF Aphid: Aphid Species File"
+          },
+          {
+            "source_database_id": 169,
+            "short_name": "SF Chrysididae",
+            "full_name": "SF Chrysididae: Chrysididae Species File"
+          },
+          {
+            "source_database_id": 51,
+            "short_name": "SF Cockroach",
+            "full_name": "SF Cockroach: Cockroach Species File"
+          },
+          {
+            "source_database_id": 134,
+            "short_name": "SF Coreoidea",
+            "full_name": "SF Coreoidea: Coreoidea Species File"
+          },
+          {
+            "source_database_id": 158,
+            "short_name": "SF Dermaptera",
+            "full_name": "SF Dermaptera: Dermaptera Species File"
+          },
+          {
+            "source_database_id": 89,
+            "short_name": "SF Embioptera",
+            "full_name": "SF Embioptera: Embioptera Species File"
+          },
+          {
+            "source_database_id": 170,
+            "short_name": "SF Grylloblattodea",
+            "full_name": "SF Grylloblattodea: Grylloblattodea Species File"
+          },
+          {
+            "source_database_id": 198,
+            "short_name": "SF Isoptera",
+            "full_name": "SF Isoptera: Isoptera Species File"
+          },
+          {
+            "source_database_id": 173,
+            "short_name": "SF Lygaeoidea",
+            "full_name": "SF Lygaeoidea: Lygaeoidea Species File "
+          },
+          {
+            "source_database_id": 62,
+            "short_name": "SF Mantodea",
+            "full_name": "SF Mantodea: Mantodea Species File"
+          },
+          {
+            "source_database_id": 168,
+            "short_name": "SF Mantophasmatodea",
+            "full_name": "SF Mantophasmatodea: Mantophasmatodea Species File"
+          },
+          {
+            "source_database_id": 21,
+            "short_name": "SF Orthoptera",
+            "full_name": "SF Orthoptera: Orthoptera Species File"
+          },
+          {
+            "source_database_id": 50,
+            "short_name": "SF Phasmida",
+            "full_name": "SF Phasmida: Phasmida Species File "
+          },
+          {
+            "source_database_id": 65,
+            "short_name": "SF Plecoptera",
+            "full_name": "SF Plecoptera: Plecoptera Species File"
+          },
+          {
+            "source_database_id": 133,
+            "short_name": "SF Psocodea",
+            "full_name": "SF Psocodea: Psocodea Species File"
+          },
+          {
+            "source_database_id": 167,
+            "short_name": "SF Zoraptera",
+            "full_name": "SF Zoraptera: Zoraptera Species File"
+          },
+          {
+            "source_database_id": 82,
+            "short_name": "SpmWeb",
+            "full_name": "SpmWeb: Spider Mites Web"
+          },
+          {
+            "source_database_id": 204,
+            "short_name": "StaphBase",
+            "full_name": "StaphBase: Staphyliniformia world catalog database"
+          },
+          {
+            "source_database_id": 103,
+            "short_name": "Strepsiptera Database",
+            "full_name": "Strepsiptera Database: Global Strepsiptera Database"
+          },
+          {
+            "source_database_id": 101,
+            "short_name": "Systema Dipterorum",
+            "full_name": "Systema Dipterorum"
+          },
+          {
+            "source_database_id": 68,
+            "short_name": "Taxapad Ichneumonoidea",
+            "full_name": "Taxapad Ichneumonoidea"
+          },
+          {
+            "source_database_id": 78,
+            "short_name": "TenuipalpidBase",
+            "full_name": "Mites GSDs: TenuipalpidBase"
+          },
+          {
+            "source_database_id": 143,
+            "short_name": "Tessaratomidae Database",
+            "full_name": "Tessaratomidae Database: Illustrated catalog of Tessaratomidae"
+          },
+          {
+            "source_database_id": 164,
+            "short_name": "The Scorpion Files",
+            "full_name": "The Scorpion Files"
+          },
+          {
+            "source_database_id": 142,
+            "short_name": "The White-Files",
+            "full_name": "The White-Files: Taxonomic checklist of the world’s whiteflies (Insecta: Hemiptera: Aleyrodidae)"
+          },
+          {
+            "source_database_id": 203,
+            "short_name": "ThripsWiki",
+            "full_name": "ThripsWiki - providing information on the World's thrips"
+          },
+          {
+            "source_database_id": 30,
+            "short_name": "TicksBase",
+            "full_name": "TicksBase"
+          },
+          {
+            "source_database_id": 31,
+            "short_name": "Tineidae NHM",
+            "full_name": "Tineidae NHM: Global Taxonomic Database of Tineidae (Lepidoptera)"
+          },
+          {
+            "source_database_id": 32,
+            "short_name": "TITAN",
+            "full_name": "TITAN: Cerambycidae database"
+          },
+          {
+            "source_database_id": 34,
+            "short_name": "UCD",
+            "full_name": "UCD: Universal Chalcidoidea Database"
+          },
+          {
+            "source_database_id": 202,
+            "short_name": "WoRMS Amphipoda",
+            "full_name": "WoRMS Amphipoda: World Amphipoda Database"
+          },
+          {
+            "source_database_id": 194,
+            "short_name": "WoRMS Antipatharia",
+            "full_name": "WoRMS Antipatharia: World List of Antipatharia"
+          },
+          {
+            "source_database_id": 178,
+            "short_name": "WoRMS Appendicularia",
+            "full_name": "WoRMS Appendicularia: World List of Appendicularia"
+          },
+          {
+            "source_database_id": 186,
+            "short_name": "WoRMS Ascidiacea",
+            "full_name": "WoRMS Ascidiacea: Ascidiacea World Database"
+          },
+          {
+            "source_database_id": 95,
+            "short_name": "WoRMS Asteroidea",
+            "full_name": "WoRMS Asteroidea: World Asteroidea Database"
+          },
+          {
+            "source_database_id": 86,
+            "short_name": "WoRMS Bochusacea",
+            "full_name": "WoRMS Bochusacea: World List of Bochusacea"
+          },
+          {
+            "source_database_id": 87,
+            "short_name": "WoRMS Brachypoda",
+            "full_name": "WoRMS Brachypoda: World List of Brachypoda"
+          },
+          {
+            "source_database_id": 108,
+            "short_name": "WoRMS Brachyura",
+            "full_name": "WoRMS Brachyura: World List of marine Brachyura"
+          },
+          {
+            "source_database_id": 81,
+            "short_name": "WoRMS Bryozoa",
+            "full_name": "WoRMS Bryozoa: World List of Bryozoa"
+          },
+          {
+            "source_database_id": 154,
+            "short_name": "WoRMS Cephalochordata",
+            "full_name": "WoRMS Cephalochordata: World List of Cephalochordata"
+          },
+          {
+            "source_database_id": 179,
+            "short_name": "WoRMS Ceriantharia",
+            "full_name": "WoRMS Ceriantharia: World list of Ceriantharia"
+          },
+          {
+            "source_database_id": 127,
+            "short_name": "WoRMS Cestoda",
+            "full_name": "WoRMS Cestoda: World List of Cestoda"
+          },
+          {
+            "source_database_id": 132,
+            "short_name": "WoRMS Chaetognatha",
+            "full_name": "WoRMS Chaetognatha: World List of Chaetognatha"
+          },
+          {
+            "source_database_id": 191,
+            "short_name": "WoRMS Copepoda",
+            "full_name": "WoRMS Copepoda: World of Copepods database"
+          },
+          {
+            "source_database_id": 195,
+            "short_name": "WoRMS Corallimorpharia",
+            "full_name": "WoRMS Corallimorpharia: World List of Corallimorpharia"
+          },
+          {
+            "source_database_id": 180,
+            "short_name": "WoRMS Ctenophora",
+            "full_name": "WoRMS Ctenophora: Phylum Ctenophora, a list of all valid species names harvested from the Internet between 1998 - present"
+          },
+          {
+            "source_database_id": 181,
+            "short_name": "WoRMS Cubozoa",
+            "full_name": "WoRMS Cubozoa: World list of Cubozoa"
+          },
+          {
+            "source_database_id": 58,
+            "short_name": "WoRMS Cumacea",
+            "full_name": "WoRMS Cumacea: World Cumacea Database"
+          },
+          {
+            "source_database_id": 106,
+            "short_name": "WoRMS Echinoidea",
+            "full_name": "WoRMS Echinoidea: World Echinoidea Database"
+          },
+          {
+            "source_database_id": 122,
+            "short_name": "WoRMS Gastrotricha",
+            "full_name": "WoRMS Gastrotricha: World Gastrotricha Database"
+          },
+          {
+            "source_database_id": 125,
+            "short_name": "WoRMS Gnathostomulida",
+            "full_name": "WoRMS Gnathostomulida: World List of Gnathostomulida"
+          },
+          {
+            "source_database_id": 176,
+            "short_name": "WoRMS Hexacoral",
+            "full_name": "WoRMS Hexacoral: Hexacorallians (Actiniaria) of the World"
+          },
+          {
+            "source_database_id": 107,
+            "short_name": "WoRMS Holothuroidea",
+            "full_name": "WoRMS Holothuroidea: World List of Holothuroidea"
+          },
+          {
+            "source_database_id": 112,
+            "short_name": "WoRMS Hydrozoa",
+            "full_name": "WoRMS Hydrozoa: World Hydrozoa Database"
+          },
+          {
+            "source_database_id": 94,
+            "short_name": "WoRMS Isopoda",
+            "full_name": "WoRMS Isopoda: World Marine, Freshwater and Terrestrial Isopod Crustaceans database"
+          },
+          {
+            "source_database_id": 153,
+            "short_name": "WoRMS Kinorhyncha",
+            "full_name": "WoRMS Kinorhyncha: World List of Kinorhyncha"
+          },
+          {
+            "source_database_id": 105,
+            "short_name": "WoRMS Leptostraca",
+            "full_name": "WoRMS Leptostraca: World List of Leptostraca"
+          },
+          {
+            "source_database_id": 182,
+            "short_name": "WoRMS Loricifera",
+            "full_name": "WoRMS Loricifera: World list of Loricifera"
+          },
+          {
+            "source_database_id": 152,
+            "short_name": "WoRMS Merostomata",
+            "full_name": "WoRMS Merostomata: World List of Merostomata"
+          },
+          {
+            "source_database_id": 200,
+            "short_name": "WoRMS MilliBase",
+            "full_name": "WoRMS MilliBase: MilliBase"
+          },
+          {
+            "source_database_id": 130,
+            "short_name": "WoRMS Mollusca",
+            "full_name": "WoRMS Mollusca: MolluscaBase"
+          },
+          {
+            "source_database_id": 126,
+            "short_name": "WoRMS Monogenea",
+            "full_name": "WoRMS Monogenea: World List of Monogenea"
+          },
+          {
+            "source_database_id": 88,
+            "short_name": "WoRMS Mystacocarida",
+            "full_name": "WoRMS Mystacocarida: World List of Mystacocarida"
+          },
+          {
+            "source_database_id": 129,
+            "short_name": "WoRMS Myxozoa",
+            "full_name": "WoRMS Myxozoa: World list of Myxozoa"
+          },
+          {
+            "source_database_id": 85,
+            "short_name": "WoRMS Nemertea",
+            "full_name": "WoRMS Nemertea: World Nemertea Database"
+          },
+          {
+            "source_database_id": 131,
+            "short_name": "WoRMS Octocorallia",
+            "full_name": "WoRMS Octocorallia: World List of Octocorallia"
+          },
+          {
+            "source_database_id": 99,
+            "short_name": "WoRMS Oligochaeta",
+            "full_name": "WoRMS Oligochaeta: World List of Marine Oligochaeta"
+          },
+          {
+            "source_database_id": 59,
+            "short_name": "WoRMS Ophiuroidea",
+            "full_name": "WoRMS Ophiuroidea: World Ophiuroidea database"
+          },
+          {
+            "source_database_id": 149,
+            "short_name": "WoRMS Orthonectida",
+            "full_name": "WoRMS Orthonectida: World List of Orthonectida"
+          },
+          {
+            "source_database_id": 175,
+            "short_name": "WoRMS Ostracoda",
+            "full_name": "WoRMS Ostracoda: World Ostracoda Database"
+          },
+          {
+            "source_database_id": 123,
+            "short_name": "WoRMS Placozoa",
+            "full_name": "WoRMS Placozoa: World Placozoa Database"
+          },
+          {
+            "source_database_id": 90,
+            "short_name": "WoRMS Polychaeta",
+            "full_name": "WoRMS Polychaeta: World Polychaeta database"
+          },
+          {
+            "source_database_id": 44,
+            "short_name": "WoRMS Porifera",
+            "full_name": "WoRMS Porifera: World Porifera database"
+          },
+          {
+            "source_database_id": 124,
+            "short_name": "WoRMS Priapulida",
+            "full_name": "WoRMS Priapulida: World List of Priapulida"
+          },
+          {
+            "source_database_id": 183,
+            "short_name": "WoRMS PycnoBase",
+            "full_name": "WoRMS PycnoBase: World Pycnogonida Database"
+          },
+          {
+            "source_database_id": 91,
+            "short_name": "WoRMS Remipedia",
+            "full_name": "WoRMS Remipedia: World Remipedia Database"
+          },
+          {
+            "source_database_id": 150,
+            "short_name": "WoRMS Rhombozoa",
+            "full_name": "WoRMS Rhombozoa: World List of Rhombozoa"
+          },
+          {
+            "source_database_id": 196,
+            "short_name": "WoRMS Scleractinia",
+            "full_name": "WoRMS Scleractinia: World List of Scleractinia"
+          },
+          {
+            "source_database_id": 188,
+            "short_name": "WoRMS Scyphozoa",
+            "full_name": "WoRMS Scyphozoa: World list of Scyphozoa"
+          },
+          {
+            "source_database_id": 184,
+            "short_name": "WoRMS Staurozoa",
+            "full_name": "WoRMS Staurozoa: World list of Staurozoa"
+          },
+          {
+            "source_database_id": 110,
+            "short_name": "WoRMS Tanaidacea",
+            "full_name": "WoRMS Tanaidacea: World List of Tanaidacea"
+          },
+          {
+            "source_database_id": 92,
+            "short_name": "WoRMS Tantulocarida",
+            "full_name": "WoRMS Tantulocarida: World List of Tantulocarida"
+          },
+          {
+            "source_database_id": 185,
+            "short_name": "WoRMS Thaliacea",
+            "full_name": "WoRMS Thaliacea: World list of Thaliacea"
+          },
+          {
+            "source_database_id": 93,
+            "short_name": "WoRMS Thermosbaenacea",
+            "full_name": "WoRMS Thermosbaenacea: World List of Thermosbaenacea"
+          },
+          {
+            "source_database_id": 128,
+            "short_name": "WoRMS Trematoda",
+            "full_name": "WoRMS Trematoda: World List of Trematoda"
+          },
+          {
+            "source_database_id": 193,
+            "short_name": "WoRMS Turbellarians",
+            "full_name": "WoRMS Turbellarians: World List of turbellarian worms (Acoelomorpha, Catenulida, Rhabditophora)"
+          },
+          {
+            "source_database_id": 100,
+            "short_name": "WoRMS Xenoturbellida",
+            "full_name": "WoRMS Xenoturbellida: World List of Xenoturbellida"
+          },
+          {
+            "source_database_id": 197,
+            "short_name": "WoRMS Zoantharia",
+            "full_name": "WoRMS Zoantharia: World List of Zoantharia"
+          },
+          {
+            "source_database_id": 29,
+            "short_name": "WSC",
+            "full_name": "WSC: World Spider Catalog"
+          },
+          {
+            "source_database_id": 39,
+            "short_name": "WTaxa",
+            "full_name": "WTaxa: Electronic Catalogue of Weevil names (Curculionoidea) "
+          },
+          {
+            "source_database_id": 37,
+            "short_name": "ZOBODAT Vespoidea",
+            "full_name": "ZOBODAT: Zoological-Botanical Database (Vespoidea)"
+          }
+        ]
+      },
+      {
+        "id": 54770081,
+        "snId": "",
+        "name": "Archaea",
+        "type": "",
+        "parentId": 0,
+        "numChildren": 2,
+        "estimation": "502",
+        "total": "377",
+        "nr_fossil": "0",
+        "nr_extant": "377",
+        "estimate_source": "Mora C., Tittensor D.P., Adl S., Simpson A.G.B., Worm B. (2011). How Many Species Are There on Earth and in the Ocean? PLoS Biol 9(8): e1001127. doi:10.1371/journal.pbio.1001127",
+        "is_extinct": 0,
+        "has_preholocene": 0,
+        "has_modern": 1,
+        "image": "/annual-checklist/2019/images/tree_icons/archaea.png",
+        "rank": "",
+        "url": null,
+        "percentage": "75%",
+        "source_databases": [
+          {
+            "source_database_id": 115,
+            "short_name": "ITIS Global",
+            "full_name": "ITIS Global: The Integrated Taxonomic Information System"
+          }
+        ]
+      },
+      {
+        "id": 54767800,
+        "snId": "",
+        "name": "Bacteria",
+        "type": "",
+        "parentId": 0,
+        "numChildren": 29,
+        "estimation": "10,358",
+        "total": "9,980",
+        "nr_fossil": "0",
+        "nr_extant": "9,980",
+        "estimate_source": "Mora C., Tittensor D.P., Adl S., Simpson A.G.B., Worm B. (2011). How Many Species Are There on Earth and in the Ocean? PLoS Biol 9(8): e1001127. doi:10.1371/journal.pbio.1001127",
+        "is_extinct": 0,
+        "has_preholocene": 0,
+        "has_modern": 1,
+        "image": "/annual-checklist/2019/images/tree_icons/bacteria.png",
+        "rank": "",
+        "url": null,
+        "percentage": "96%",
+        "source_databases": [
+          {
+            "source_database_id": 115,
+            "short_name": "ITIS Global",
+            "full_name": "ITIS Global: The Integrated Taxonomic Information System"
+          }
+        ]
+      },
+      {
+        "id": 54768342,
+        "snId": "",
+        "name": "Chromista",
+        "type": "",
+        "parentId": 0,
+        "numChildren": 14,
+        "estimation": "25,000",
+        "total": "25,826",
+        "nr_fossil": "2,339",
+        "nr_extant": "23,487",
+        "estimate_source": "Chapman A.D. (2009). Numbers of Living Species in Australia and the World, 2nd edition. ABRS, Australia. 80 p.",
+        "is_extinct": 0,
+        "has_preholocene": 0,
+        "has_modern": 1,
+        "image": "/annual-checklist/2019/images/tree_icons/chromista.png",
+        "rank": "",
+        "url": null,
+        "percentage": "94%",
+        "source_databases": [
+          {
+            "source_database_id": 113,
+            "short_name": "CilCat",
+            "full_name": "CilCat: The World Ciliate Catalog"
+          },
+          {
+            "source_database_id": 177,
+            "short_name": "Gymnodinium",
+            "full_name": "Gymnodinium: The dinoflagellate genus Gymnodinium checklist"
+          },
+          {
+            "source_database_id": 115,
+            "short_name": "ITIS Global",
+            "full_name": "ITIS Global: The Integrated Taxonomic Information System"
+          },
+          {
+            "source_database_id": 17,
+            "short_name": "ITIS Regional",
+            "full_name": "ITIS Regional: The Integrated Taxonomic Information System"
+          },
+          {
+            "source_database_id": 174,
+            "short_name": "PaleoBioDB",
+            "full_name": "PaleoBioDB: The Paleobiology Database"
+          },
+          {
+            "source_database_id": 28,
+            "short_name": "Species Fungorum",
+            "full_name": "Species Fungorum"
+          },
+          {
+            "source_database_id": 157,
+            "short_name": "WoRMS Foraminifera",
+            "full_name": "WoRMS Foraminifera: World Foraminifera Database"
+          },
+          {
+            "source_database_id": 109,
+            "short_name": "WoRMS Polycystina",
+            "full_name": "WoRMS Polycystina: World List of Polycystina (Radiolaria)"
+          }
+        ]
+      },
+      {
+        "id": 54767767,
+        "snId": "",
+        "name": "Fungi",
+        "type": "",
+        "parentId": 0,
+        "numChildren": 5,
+        "estimation": "140,000",
+        "total": "135,110",
+        "nr_fossil": "0",
+        "nr_extant": "135,110",
+        "estimate_source": "Kirk P.M. (2016). Personal comment.",
+        "is_extinct": 0,
+        "has_preholocene": 0,
+        "has_modern": 1,
+        "image": "/annual-checklist/2019/images/tree_icons/fungi.png",
+        "rank": "",
+        "url": null,
+        "percentage": "97%",
+        "source_databases": [
+          {
+            "source_database_id": 98,
+            "short_name": "Dothideomycetes",
+            "full_name": "Dothideomycetes"
+          },
+          {
+            "source_database_id": 12,
+            "short_name": "Glomeromycota",
+            "full_name": "Glomeromycota"
+          },
+          {
+            "source_database_id": 79,
+            "short_name": "LIAS",
+            "full_name": "LIAS: A Global Information System for Lichenized and Non-Lichenized Ascomycetes"
+          },
+          {
+            "source_database_id": 23,
+            "short_name": "Phyllachorales",
+            "full_name": "Phyllachorales"
+          },
+          {
+            "source_database_id": 25,
+            "short_name": "Rhytismatales",
+            "full_name": "Rhytismatales"
+          },
+          {
+            "source_database_id": 97,
+            "short_name": "Saccharomycetes",
+            "full_name": "Saccharomycetes"
+          },
+          {
+            "source_database_id": 28,
+            "short_name": "Species Fungorum",
+            "full_name": "Species Fungorum"
+          },
+          {
+            "source_database_id": 33,
+            "short_name": "Trichomycetes",
+            "full_name": "Trichomycetes"
+          },
+          {
+            "source_database_id": 36,
+            "short_name": "Xylariaceae",
+            "full_name": "Xylariaceae: Home of the Xylariaceae"
+          },
+          {
+            "source_database_id": 38,
+            "short_name": "Zygomycetes",
+            "full_name": "Zygomycetes"
+          }
+        ]
+      },
+      {
+        "id": 54767868,
+        "snId": "",
+        "name": "Plantae",
+        "type": "",
+        "parentId": 0,
+        "numChildren": 8,
+        "estimation": "382,000",
+        "total": "367,453",
+        "nr_fossil": "979",
+        "nr_extant": "366,474",
+        "estimate_source": "Roskov Y. (2016). Personal comment.",
+        "is_extinct": 0,
+        "has_preholocene": 0,
+        "has_modern": 1,
+        "image": "/annual-checklist/2019/images/tree_icons/plantae.png",
+        "rank": "",
+        "url": null,
+        "percentage": "96%",
+        "source_databases": [
+          {
+            "source_database_id": 40,
+            "short_name": "AnnonBase",
+            "full_name": "AnnonBase: Annonaceae GSD"
+          },
+          {
+            "source_database_id": 73,
+            "short_name": "Brassicaceae",
+            "full_name": "Brassicaceae species checklist and database"
+          },
+          {
+            "source_database_id": 121,
+            "short_name": "CoL China",
+            "full_name": "Catalogue of Life China"
+          },
+          {
+            "source_database_id": 45,
+            "short_name": "Conifer Database",
+            "full_name": "Conifer Database"
+          },
+          {
+            "source_database_id": 66,
+            "short_name": "Droseraceae Database",
+            "full_name": "Droseraceae Database"
+          },
+          {
+            "source_database_id": 74,
+            "short_name": "ELPT",
+            "full_name": "ELPT: Early Land Plants Today"
+          },
+          {
+            "source_database_id": 201,
+            "short_name": "Fossil Ginkgoales",
+            "full_name": "Fossil Ginkgoales"
+          },
+          {
+            "source_database_id": 15,
+            "short_name": "ILDIS",
+            "full_name": "ILDIS World Database of Legumes"
+          },
+          {
+            "source_database_id": 115,
+            "short_name": "ITIS Global",
+            "full_name": "ITIS Global: The Integrated Taxonomic Information System"
+          },
+          {
+            "source_database_id": 19,
+            "short_name": "MOST",
+            "full_name": "MOST: Moss TROPICOS Database"
+          },
+          {
+            "source_database_id": 174,
+            "short_name": "PaleoBioDB",
+            "full_name": "PaleoBioDB: The Paleobiology Database"
+          },
+          {
+            "source_database_id": 48,
+            "short_name": "RJB Geranium",
+            "full_name": "RJB Geranium: Geranium Taxonomic Information System"
+          },
+          {
+            "source_database_id": 163,
+            "short_name": "The World List of Cycads",
+            "full_name": "The World List of Cycads"
+          },
+          {
+            "source_database_id": 24,
+            "short_name": "WCSP",
+            "full_name": "WCSP: World Checklist of Selected Plant Families"
+          },
+          {
+            "source_database_id": 140,
+            "short_name": "World Ferns",
+            "full_name": "World Ferns: Checklist of Ferns and Lycophytes of the World"
+          },
+          {
+            "source_database_id": 141,
+            "short_name": "World Plants",
+            "full_name": "World Plants: Synonymic Checklists of the Vascular Plants of the World "
+          },
+          {
+            "source_database_id": 162,
+            "short_name": "WWW",
+            "full_name": "WWW: World Wide Wattle"
+          }
+        ]
+      },
+      {
+        "id": 54769390,
+        "snId": "",
+        "name": "Protozoa",
+        "type": "",
+        "parentId": 0,
+        "numChildren": 12,
+        "estimation": "8,118",
+        "total": "2,720",
+        "nr_fossil": "0",
+        "nr_extant": "2,720",
+        "estimate_source": "Mora C., Tittensor D.P., Adl S., Simpson A.G.B., Worm B. (2011). How Many Species Are There on Earth and in the Ocean? PLoS Biol 9(8): e1001127. doi:10.1371/journal.pbio.1001127",
+        "is_extinct": 0,
+        "has_preholocene": 0,
+        "has_modern": 1,
+        "image": "/annual-checklist/2019/images/tree_icons/protozoa.png",
+        "rank": "",
+        "url": null,
+        "percentage": "34%",
+        "source_databases": [
+          {
+            "source_database_id": 121,
+            "short_name": "CoL China",
+            "full_name": "Catalogue of Life China"
+          },
+          {
+            "source_database_id": 17,
+            "short_name": "ITIS Regional",
+            "full_name": "ITIS Regional: The Integrated Taxonomic Information System"
+          },
+          {
+            "source_database_id": 148,
+            "short_name": "Microsporidia",
+            "full_name": "Microsporidia: Unicellular spore-forming protozoan parasites"
+          },
+          {
+            "source_database_id": 53,
+            "short_name": "Nomen.eumycetozoa.com",
+            "full_name": "Nomen.eumycetozoa.com: An online nomenclatural information system of Eumycetozoa"
+          },
+          {
+            "source_database_id": 28,
+            "short_name": "Species Fungorum",
+            "full_name": "Species Fungorum"
+          },
+          {
+            "source_database_id": 33,
+            "short_name": "Trichomycetes",
+            "full_name": "Trichomycetes"
+          }
+        ]
+      },
+      {
+        "id": 54767794,
+        "snId": "",
+        "name": "Viruses",
+        "type": "",
+        "parentId": 0,
+        "numChildren": 1,
+        "estimation": "3,186",
+        "total": "3,186",
+        "nr_fossil": "0",
+        "nr_extant": "3,186",
+        "estimate_source": "ICTV 2014 Master Species List. Version 4 of June 12, 2015",
+        "is_extinct": 0,
+        "has_preholocene": 0,
+        "has_modern": 1,
+        "image": "/annual-checklist/2019/images/tree_icons/viruses.png",
+        "rank": "",
+        "url": null,
+        "percentage": "100%",
+        "source_databases": [
+          {
+            "source_database_id": 14,
+            "short_name": "ICTV_MSL",
+            "full_name": "ICTV/MSL: International Committee on Taxonomy of Viruses / Master Species List"
+          }
+        ]
+      }
+    ],
+    "label": "name"
+  }
