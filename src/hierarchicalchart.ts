@@ -130,7 +130,7 @@ export default function drawHierarchicalChart() {
       // Normalize for fixed-depth.
       // Set distance between tree nodes
       nodes.forEach(function(d) {
-        d.y = d.depth * 220;
+        d.y = d.depth * 260;
       });
 
       // ****************** Nodes section ***************************
@@ -316,15 +316,26 @@ export default function drawHierarchicalChart() {
             C ${(s.y + d.y ) / 2} ${s.x},
               ${(s.y + d.y ) / 2} ${d.x},
               ${d.y} ${d.x}`;*/
+        
         /*
-        let path = `M ${s.y} ${s.x}
-              C ${(s.y - d.y) } ${s.x},
-                ${(s.y + d.y)} ${d.x},
-                ${d.y + 120} ${d.x}`;*/
+        C x1 y1, x2 y2, x y
+        The last set of coordinates here (x,y) specify where the line should end. 
+        The other two are control points. (x1,y1) is the control point for the start of the curve, 
+        and (x2,y2) is the control point for the end. The control points essentially describe the slope 
+        of the line starting at each point. The Bezier function then creates a smooth curve that transfers 
+        from the slope established at the beginning of the line, to the slope at the other end.
+        */
 
+        let path = `M ${s.y} ${s.x}
+              C ${(s.y - d.y)*1.5} ${s.x},
+                ${(s.y + cardW + lollypopCircleRadius )/1.5} ${d.x},
+                ${d.y + cardW + lollypopCircleRadius} ${d.x}`;
+
+                /*
         let path = `M ${s.y} ${s.x} L ${d.y + cardW + lollypopCircleRadius} ${
           d.x
         }`;
+        */
         return path;
       }
 
