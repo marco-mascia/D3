@@ -2,7 +2,7 @@ import * as d3 from "d3";
 
 export default function drawHierarchicalChart() {
   d3.json("/assets/flare.json").then(res => {
-    draw(res);
+    update(res);
   });
 
   // Set the dimensions and margins of the diagram
@@ -21,15 +21,66 @@ export default function drawHierarchicalChart() {
   // moves the 'group' element to the top left margin
   const g = svg
     .append("g")
+    .attr("class", "drawarea")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  svg.call(
-    d3.zoom().on("zoom", function() {
-      svg.attr("transform", d3.event.transform);
-    })
-  );
 
-  function draw(data) {
+  let tickPadding = 4;
+  let xScale = d3
+    .scaleLinear()
+    .domain([0, width])
+    .range([0, width]);
+
+  let yScale = d3
+    .scaleLinear()
+    .domain([0, height])
+    .range([0, height]);
+
+  let xAxis = d3
+    .axisBottom(xScale)
+    .ticks(7)
+    .tickSize(height)
+    .tickPadding(tickPadding - height);
+
+  let yAxis = d3
+    .axisRight(yScale)
+    .ticks(5)
+    .tickSize(width)
+    .tickPadding(tickPadding - width);
+
+  let xGroup = svg.select(".axis-x").call(xAxis);
+  let yGroup = svg.select(".axis-y").call(yAxis);
+
+  let view = svg.select(".drawarea");
+  let minZoom = 1 / 20;
+  let maxZoom = 20;
+
+  let zoom = d3
+    .zoom()
+    .scaleExtent([minZoom, maxZoom])
+    .translateExtent([
+      [0, 0],
+      [width, height]
+    ])
+    .on("zoom", () => {
+      let t = d3.event.transform;
+      view.attr("transform", t);
+      xGroup.call(xAxis.scale(t.rescaleX(xScale)));
+      yGroup.call(yAxis.scale(t.rescaleY(yScale)));
+      d3.select("#reset-button").text(
+        "translate(" +
+          Math.floor(t.x) +
+          ", " +
+          Math.floor(t.y) +
+          ") scale(" +
+          t.k.toFixed(2) +
+          ")"
+      );
+      //applyStyling();
+    });
+  svg.call(zoom);
+
+  function update(data) {
     let i = 0,
       duration = 750,
       root;
@@ -73,7 +124,7 @@ export default function drawHierarchicalChart() {
       // ****************** Nodes section ***************************
 
       // Update the nodes...
-      let node = svg.selectAll("g.node").data(nodes, function(d) {
+      let node = g.selectAll("g.node").data(nodes, function(d) {
         return d.id || (d.id = ++i);
       });
 
@@ -170,7 +221,7 @@ export default function drawHierarchicalChart() {
       // ****************** links section ***************************
 
       // Update the links...
-      let link = svg.selectAll("path.link").data(links, function(d) {
+      let link = g.selectAll("path.link").data(links, function(d) {
         return d.id;
       });
 
@@ -230,7 +281,6 @@ export default function drawHierarchicalChart() {
         //console.log("s ", s);
         //console.log("d ", d);
         let path = `M ${s.y} ${s.x} L ${d.y + 125} ${d.x}`;
-
         return path;
       }
 

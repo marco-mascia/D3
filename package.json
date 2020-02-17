@@ -51,5 +51,7 @@
     "webpack-md5-hash": "0.0.6",
     "webpack-merge": "^4.1.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "d3-zoom": "^1.8.3"
+  }
 }
