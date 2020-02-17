@@ -177,7 +177,7 @@ export default function drawHierarchicalChart() {
         .attr("x2", cardW)
         .attr("class", function(d) {
           if (d._children) {
-            return "line leaf";
+            return "line lollypop";
           }
           return "line"
         });
@@ -190,12 +190,13 @@ export default function drawHierarchicalChart() {
         .attr("stroke-width", 1)
         .attr("class", function(d) {
           if (d._children) {
-            return "circle leaf";
+            return "circle lollypop";
           }
           return "circle"
         });
 
       // Add labels for the nodes
+      //Node Name
       nodeEnter
         .append("text")
         .attr("dy", ".40em")
@@ -207,7 +208,19 @@ export default function drawHierarchicalChart() {
         })
         .text(function(d) {
           return d.data.name;
-        });
+        })
+
+        //Node Value
+        /*
+        nodeEnter
+        .append("text")
+        .attr("dy", ".40em")
+        .attr("dx", "8em")
+        .text(function(d) {
+          return d.data.size;
+        })
+        */
+
 
       // UPDATE
       let nodeUpdate = nodeEnter.merge(node);
