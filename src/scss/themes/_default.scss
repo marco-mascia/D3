@@ -27,17 +27,21 @@ ul {
   
 svg { 
   border: 1px solid lightsteelblue; 
-  background-color: lightslategrey;
+  //background-color: lightslategrey;
 }
 
 .level-0 {
   opacity: 0;
 }
 
-.node circle {
+.circle {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.leaf{
   fill: #fff;
-  stroke: lightsteelblue;
-  stroke-width: 3px;
+  stroke: steelblue;
 }
 
 .node text {

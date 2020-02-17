@@ -24,36 +24,36 @@ export default function drawHierarchicalChart() {
     .attr("class", "drawarea")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-
-  let tickPadding = 4;
-  let xScale = d3
+  /* ****************** ZOOM SECTION ****************** */
+  const tickPadding = 4;
+  const xScale = d3
     .scaleLinear()
     .domain([0, width])
     .range([0, width]);
 
-  let yScale = d3
+  const yScale = d3
     .scaleLinear()
     .domain([0, height])
     .range([0, height]);
 
-  let xAxis = d3
+  const xAxis = d3
     .axisBottom(xScale)
     .ticks(7)
     .tickSize(height)
     .tickPadding(tickPadding - height);
 
-  let yAxis = d3
+  const yAxis = d3
     .axisRight(yScale)
     .ticks(5)
     .tickSize(width)
     .tickPadding(tickPadding - width);
 
-  let xGroup = svg.select(".axis-x").call(xAxis);
-  let yGroup = svg.select(".axis-y").call(yAxis);
+  const xGroup = svg.select(".axis-x").call(xAxis);
+  const yGroup = svg.select(".axis-y").call(yAxis);
 
-  let view = svg.select(".drawarea");
-  let minZoom = 1 / 20;
-  let maxZoom = 20;
+  const view = svg.select(".drawarea");
+  const minZoom = 1 / 20;
+  const maxZoom = 20;
 
   let zoom = d3
     .zoom()
@@ -78,7 +78,18 @@ export default function drawHierarchicalChart() {
       );
       //applyStyling();
     });
+
+  /* ****************** zoom reset ****************** */
+  d3.select("#reset-button").on("click", () => {
+    svg
+      .transition()
+      .duration(1000)
+      .call(zoom.transform, d3.zoomIdentity);
+  });
+
   svg.call(zoom);
+
+  /* ****************** UPDATE SECTION ******************  */
 
   function update(data) {
     let i = 0,
@@ -117,8 +128,9 @@ export default function drawHierarchicalChart() {
         links = treeData.descendants().slice(1);
 
       // Normalize for fixed-depth.
+      // Set distance between tree nodes
       nodes.forEach(function(d) {
-        d.y = d.depth * 180;
+        d.y = d.depth * 220;
       });
 
       // ****************** Nodes section ***************************
@@ -140,29 +152,47 @@ export default function drawHierarchicalChart() {
         })
         .on("click", click);
 
-      // Add Circle for the nodes
-      /*
-      nodeEnter
-        .append("circle")
-        .attr("class", "node")
-        .attr("r", 1e-6)
-        .style("fill", function(d) {
-          return d._children ? "lightsteelblue" : "#fff";
-        });
-        */
+      let cardW = 150;
+      let cardH = 30;
+      let cardX = -15;
+      let cardY = -15;
 
       const rectangle = nodeEnter
         .append("rect")
         .attr("class", "node")
         .attr("rx", 5)
         .attr("ry", 5)
-        .attr("x", -15)
-        .attr("y", -15)
-        .attr("width", 150)
-        .attr("height", 30)
+        .attr("x", cardX)
+        .attr("y", cardY)
+        .attr("width", cardW)
+        .attr("height", cardH)
         .style("stroke", "steelblue")
         .style("fill", function(d) {
           return d._children ? "lightsteelblue" : "white";
+        });
+
+      const lollypopLine = nodeEnter
+        .append("line")
+        .attr("x1", cardW + cardX)
+        .attr("x2", cardW)
+        .attr("class", function(d) {
+          if (d._children) {
+            return "line leaf";
+          }
+          return "line"
+        });
+
+      let lollypopCircleRadius = 10;
+      const lollypopCircle = nodeEnter
+        .append("circle")
+        .attr("r", lollypopCircleRadius)
+        .attr("cx", cardW + lollypopCircleRadius)
+        .attr("stroke-width", 1)
+        .attr("class", function(d) {
+          if (d._children) {
+            return "circle leaf";
+          }
+          return "circle"
         });
 
       // Add labels for the nodes
@@ -278,9 +308,10 @@ export default function drawHierarchicalChart() {
               C ${(s.y - d.y) } ${s.x},
                 ${(s.y + d.y)} ${d.x},
                 ${d.y + 120} ${d.x}`;*/
-        //console.log("s ", s);
-        //console.log("d ", d);
-        let path = `M ${s.y} ${s.x} L ${d.y + 125} ${d.x}`;
+
+        let path = `M ${s.y} ${s.x} L ${d.y + cardW + lollypopCircleRadius} ${
+          d.x
+        }`;
         return path;
       }
 
