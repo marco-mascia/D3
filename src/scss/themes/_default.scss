@@ -34,7 +34,7 @@ svg {
   opacity: 0;
 }
 
-.circle {
+.circle, .line {
   fill: transparent;
   stroke: transparent;
 }
@@ -56,4 +56,13 @@ svg {
 
 .link.level-1{
   opacity: 0;
+}
+
+.childCounter{
+  stroke: steelblue;
+  fill: steelblue;
+}
+
+.text .childCounter{
+  stroke: white;
 }

@@ -176,24 +176,17 @@ export default function drawHierarchicalChart() {
         .attr("x1", cardW + cardX)
         .attr("x2", cardW)
         .attr("class", function(d) {
-          if (d._children) {
             return "line lollypop";
-          }
-          return "line"
         });
 
       let lollypopCircleRadius = 5;
+      let childCounterCircleRadius = 10;
       const lollypopCircle = nodeEnter
         .append("circle")
-        .attr("r", lollypopCircleRadius)
         .attr("cx", cardW + lollypopCircleRadius)
         .attr("stroke-width", 1)
-        .attr("class", function(d) {
-          if (d._children) {
-            return "circle lollypop";
-          }
-          return "circle"
-        });
+        .attr("class", "lollypop");
+
 
       // Add labels for the nodes
       // Node Name
@@ -208,19 +201,7 @@ export default function drawHierarchicalChart() {
         })
         .text(function(d) {
           return d.data.name;
-        })
-
-        //Node Value
-        /*
-        nodeEnter
-        .append("text")
-        .attr("dy", ".40em")
-        .attr("dx", "8em")
-        .text(function(d) {
-          return d.data.size;
-        })
-        */
-
+        });
 
       // UPDATE
       let nodeUpdate = nodeEnter.merge(node);
@@ -242,6 +223,26 @@ export default function drawHierarchicalChart() {
         })
         .attr("cursor", "pointer");
 
+
+        nodeUpdate
+        .select('circle')
+        .attr("r", function(d){
+          if (d.children) {
+            return lollypopCircleRadius;
+          } else if(d._children){
+            return childCounterCircleRadius;
+          }
+            return 0;
+        })
+
+        nodeUpdate
+        .select('.lollypop')
+        .style('stroke', function(d){
+          if (!d.children && !d._children) {
+            return 'transparent';
+          }
+        })
+        
       // Remove any exiting nodes
       let nodeExit = node
         .exit()
@@ -311,12 +312,11 @@ export default function drawHierarchicalChart() {
 
       // Creates a curved (diagonal) path from parent to the child nodes
       function diagonal(s, d) {
-        
         let path = `M ${s.y} ${s.x}
             C ${(s.y + d.y + cardW + lollypopCircleRadius) / 2} ${s.x},
-              ${(s.y + d.y + cardW + lollypopCircleRadius ) / 2} ${d.x},
+              ${(s.y + d.y + cardW + lollypopCircleRadius) / 2} ${d.x},
               ${d.y + cardW + lollypopCircleRadius} ${d.x}`;
-        
+
         /*
         C x1 y1, x2 y2, x y
         The last set of coordinates here (x,y) specify where the line should end. 
@@ -331,11 +331,11 @@ export default function drawHierarchicalChart() {
                 ${(s.y + cardW + lollypopCircleRadius )/1.5} ${d.x},
                 ${d.y + cardW + lollypopCircleRadius} ${d.x}`;*/
 
-                  /*
+        /*
         let path = `M ${s.y} ${s.x} L ${d.y + cardW + lollypopCircleRadius} ${
           d.x
         }`;*/
-        
+
         return path;
       }
 
