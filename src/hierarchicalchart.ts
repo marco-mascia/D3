@@ -182,7 +182,7 @@ export default function drawHierarchicalChart() {
           return "line"
         });
 
-      let lollypopCircleRadius = 10;
+      let lollypopCircleRadius = 5;
       const lollypopCircle = nodeEnter
         .append("circle")
         .attr("r", lollypopCircleRadius)
@@ -196,7 +196,7 @@ export default function drawHierarchicalChart() {
         });
 
       // Add labels for the nodes
-      //Node Name
+      // Node Name
       nodeEnter
         .append("text")
         .attr("dy", ".40em")
@@ -311,11 +311,11 @@ export default function drawHierarchicalChart() {
 
       // Creates a curved (diagonal) path from parent to the child nodes
       function diagonal(s, d) {
-        /*
+        
         let path = `M ${s.y} ${s.x}
-            C ${(s.y + d.y ) / 2} ${s.x},
-              ${(s.y + d.y ) / 2} ${d.x},
-              ${d.y} ${d.x}`;*/
+            C ${(s.y + d.y + cardW + lollypopCircleRadius) / 2} ${s.x},
+              ${(s.y + d.y + cardW + lollypopCircleRadius ) / 2} ${d.x},
+              ${d.y + cardW + lollypopCircleRadius} ${d.x}`;
         
         /*
         C x1 y1, x2 y2, x y
@@ -325,17 +325,17 @@ export default function drawHierarchicalChart() {
         of the line starting at each point. The Bezier function then creates a smooth curve that transfers 
         from the slope established at the beginning of the line, to the slope at the other end.
         */
-
+        /*
         let path = `M ${s.y} ${s.x}
-              C ${(s.y - d.y)*1.5} ${s.x},
+              C ${(s.y+ cardW + lollypopCircleRadius - d.y)*1.5} ${s.x},
                 ${(s.y + cardW + lollypopCircleRadius )/1.5} ${d.x},
-                ${d.y + cardW + lollypopCircleRadius} ${d.x}`;
+                ${d.y + cardW + lollypopCircleRadius} ${d.x}`;*/
 
-                /*
+                  /*
         let path = `M ${s.y} ${s.x} L ${d.y + cardW + lollypopCircleRadius} ${
           d.x
-        }`;
-        */
+        }`;*/
+        
         return path;
       }
 
