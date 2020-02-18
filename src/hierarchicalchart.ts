@@ -149,8 +149,7 @@ export default function drawHierarchicalChart() {
         })
         .attr("transform", function(d) {
           return "translate(" + source.y0 + "," + source.x0 + ")";
-        })
-        .on("click", click);
+        });
 
       let cardW = 150;
       let cardH = 30;
@@ -171,21 +170,35 @@ export default function drawHierarchicalChart() {
           return d._children ? "lightsteelblue" : "white";
         });
 
-      const lollypopLine = nodeEnter
+      let lollypopCircleRadius = 5;
+      let childCounterCircleRadius = 10;
+
+      const lollypop = nodeEnter
+      .append("g")
+      .on("click", click);
+      
+      const lollypopLine = lollypop
         .append("line")
         .attr("x1", cardW + cardX)
         .attr("x2", cardW)
         .attr("class", function(d) {
-            return "line lollypop";
+          return "line lollypop";
         });
 
-      let lollypopCircleRadius = 5;
-      let childCounterCircleRadius = 10;
-      const lollypopCircle = nodeEnter
+      const lollypopCircle = lollypop
         .append("circle")
         .attr("cx", cardW + lollypopCircleRadius)
         .attr("stroke-width", 1)
         .attr("class", "lollypop");
+       
+        
+      const lollypopText = lollypop
+      .append('text')
+      .attr("text-anchor", "middle")
+      .attr("x", cardW + lollypopCircleRadius/2 + 2)
+      .attr("y", 4)
+      .attr("class", "lollypopText");
+      
 
 
       // Add labels for the nodes
@@ -223,26 +236,27 @@ export default function drawHierarchicalChart() {
         })
         .attr("cursor", "pointer");
 
+      nodeUpdate.select("circle").attr("r", function(d) {
+        if (d.children) {
+          return lollypopCircleRadius;
+        } else if (d._children) {
+          return childCounterCircleRadius;
+        }
+        return 0;
+      });
 
-        nodeUpdate
-        .select('circle')
-        .attr("r", function(d){
-          if (d.children) {
-            return lollypopCircleRadius;
-          } else if(d._children){
-            return childCounterCircleRadius;
-          }
-            return 0;
-        })
+      nodeUpdate.select(".lollypop").style("stroke", function(d) {
+        if (!d.children && !d._children) {
+          return "transparent";
+        }
+      });
 
-        nodeUpdate
-        .select('.lollypop')
-        .style('stroke', function(d){
-          if (!d.children && !d._children) {
-            return 'transparent';
-          }
-        })
-        
+      nodeUpdate.select(".lollypopText").text(function(d) {
+        if(d._children){
+          return d._children.length;
+        }
+      });
+
       // Remove any exiting nodes
       let nodeExit = node
         .exit()
