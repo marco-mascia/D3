@@ -149,12 +149,13 @@ export default function drawHierarchicalChart() {
         })
         .attr("transform", function(d) {
           return "translate(" + source.y0 + "," + source.x0 + ")";
+          //return "translate(" + d.x + "," + d.y + ")";
         });
 
-      let cardW = 150;
-      let cardH = 30;
-      let cardX = -15;
-      let cardY = -15;
+      const cardW = 150;
+      const cardH = 30;
+      const cardX = -15;
+      const cardY = -15;
 
       const rectangle = nodeEnter
         .append("rect")
@@ -170,37 +171,35 @@ export default function drawHierarchicalChart() {
           return d._children ? "lightsteelblue" : "white";
         });
 
-      let lollypopCircleRadius = 5;
-      let childCounterCircleRadius = 10;
+      
+      const lollypopCircleRadius = 5;
+      const childCounterCircleRadius = 10;
 
       const lollypop = nodeEnter
       .append("g")
+      .attr("transform", "translate("+ cardW +",0)")
       .on("click", click);
       
       const lollypopLine = lollypop
         .append("line")
-        .attr("x1", cardW + cardX)
-        .attr("x2", cardW)
+        .attr("x2", cardX)
         .attr("class", function(d) {
           return "line lollypop";
         });
 
       const lollypopCircle = lollypop
         .append("circle")
-        .attr("cx", cardW + lollypopCircleRadius)
+        .attr("cx", lollypopCircleRadius)
         .attr("stroke-width", 1)
         .attr("class", "lollypop");
        
-        
       const lollypopText = lollypop
       .append('text')
       .attr("text-anchor", "middle")
-      .attr("x", cardW + lollypopCircleRadius/2 + 2)
+      .attr("x", lollypopCircleRadius/2 + 2)
       .attr("y", 4)
       .attr("class", "lollypopText");
       
-
-
       // Add labels for the nodes
       // Node Name
       nodeEnter
@@ -225,6 +224,7 @@ export default function drawHierarchicalChart() {
         .duration(duration)
         .attr("transform", function(d) {
           return "translate(" + d.y + "," + d.x + ")";
+          //return "translate(" + d.x + "," + d.y + ")";
         });
 
       // Update the node attributes and style

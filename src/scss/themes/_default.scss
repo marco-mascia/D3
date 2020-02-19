@@ -66,9 +66,14 @@ svg {
 }
 
 .text .childCounter {
+  
   stroke: white;
+ 
 }
 
 .lollypopText {
   fill: white;
+  &:hover{
+    cursor: pointer;
+  }
 }
